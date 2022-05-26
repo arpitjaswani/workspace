@@ -4,7 +4,7 @@ sudo usermod -a -G microk8s $USER
 
 sudo chown -f -R $USER ~/.kube
 
-su - $USER
+newgrp microk8s
 
 echo "alias kubectl='microk8s kubectl'" >> ~/.bash_aliases
 
